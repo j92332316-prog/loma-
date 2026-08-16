@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <!-- 1. 啟用 iOS 全螢幕 App 模式與視圖縮放設定 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    
+    <!-- 2. iOS 專屬 Web App 標籤 -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="LOMA題庫">
+    
+    <!-- 3. App 圖示 (建議放置一張 180x180 的 icon.png 於同目錄) -->
+    <!-- <link rel="apple-touch-icon" href="icon.png"> -->
+
+    <title>LOMA 題庫 App</title>
+
+    <!-- 載入 Tailwind CSS 用於快速樣式 (對應 Lucide 佈局) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- 載入 React 與 ReactDOM (使用 UMD 版本) -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    
+    <!-- 載入 Babel 以便在瀏覽器中編譯 JSX -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <!-- 載入 Lucide React 圖示庫 (UMD) -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        /* 避免 iOS 點擊閃爍與橡皮筋捲動邊界 */
+        body {
+            -webkit-tap-highlight-color: transparent;
+            overscroll-behavior-y: none;
+            background-color: #f3f4f6; /* bg-gray-100 */
+        }
+    </style>
+</head>
+<body>
+    <!-- React 應用的掛載點 -->
+    <div id="root"></div>
+
+    <!-- 您的 React 程式碼 (app.js) -->
+    <script type="text/babel" src="app.js"></script>
+</body>
+</html>
